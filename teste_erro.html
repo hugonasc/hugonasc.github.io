@@ -492,6 +492,7 @@
     <td class=celulaDados colspan=3>&nbsp;
 		
     <input type=text class=inputNormalCinza id="v_rcm_ite_cdo" name="v_rcm_ite_cdo" value="100,00" size="13" maxlength="17" onKeyUp="FormataMoeda(this,'20')">
+<input type=text class=inputNormalCinza id="v_rcm_ite_cdo2" name="v_rcm_ite_cdo2" value="100,00" size="13" maxlength="17" onKeyUp="formatBR(this.value,2)">
     </td>
     </tr>
         <tr id="idSalvados" style="display:none">
@@ -577,6 +578,25 @@
 </html>
 
 <script type="text/javascript">
+
+    function formatBR(value, decimais) {
+
+    decimais = decimais || 2;
+    var mi = value.length - parseInt(decimais);
+    var sm = parseInt(mi / 3);
+    var regx = "", repl = "";
+
+    for (var i = 0; i < sm; i++) {
+        regx = regx.concat('([0-9]{3})');
+        repl = repl.concat('.$' + (i + 1));
+    }
+
+    regx = regx.concat('([0-9]{' + decimais + '})') + "$";
+    repl = repl.concat(',$' + (sm + 1));
+    value = value.toString().replace(new RegExp(regx, 'g'), repl);
+    return (mi % 3) === 0 ? value.substr(1) : value;
+}
+
     function FormataMoeda(campo, tammax, teclapres, caracter) {
 
         try {
@@ -585,6 +605,7 @@
 
 	    alert(window.event.which);
 	    alert(window.event.keyCode);
+	alert(window.event.charCodeAt);	
 
             var tcl = window.event.keyCode;
 	    var vr = campo.value;
