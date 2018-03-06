@@ -747,7 +747,7 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
 				} else { 
 				   r = "" + soNumeros(window.event) + "";
                 }
-				
+				/*
                 if (campo.value.length < 2) {
                     if (vr.length < 6) {
                         campo.value = "";
@@ -757,7 +757,7 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
                     if (vr.length < 6) {
                         campo.value = vr.substr(0, tam);
                     }
-                }
+                }*/
             }
 
             var opcao = "M";
@@ -792,7 +792,7 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
             vr = troca(vr, ",", "");
             vr = troca(vr, ".", "");
 
-            tam = vr.length;
+            var tam = vr.length;
 
             if (isNaN(vr)) {
                 campo.value = vr.substr(0, tam - 1);
