@@ -140,23 +140,23 @@
 							 
 						               <option value="1000001*ARTIGOS DE CAMA E MESA">ARTIGOS DE CAMA E MESA</option>
 							 
-						               <option value="1000000*ARTIGOS DE VESTUáRIO">ARTIGOS DE VESTUáRIO</option>
+						               <option value="1000000*ARTIGOS DE VESTUï¿½RIO">ARTIGOS DE VESTUï¿½RIO</option>
 							 
-						               <option value="1200171*CONDOMÍNIO - INTERFONES, CIRCUÍTO FECHADO DE TV, PORTEIRO ELETRÔNICO E DEMAIS EQUIP. ELETRÔNICOS">CONDOMÍNIO - INTERFONES, CIRCUÍTO FECHADO DE TV, PORTEIRO ELETRÔNICO E DEMAIS EQUIP. ELETRÔNICOS</option>
+						               <option value="1200171*CONDOMï¿½NIO - INTERFONES, CIRCUï¿½TO FECHADO DE TV, PORTEIRO ELETRï¿½NICO E DEMAIS EQUIP. ELETRï¿½NICOS">CONDOMï¿½NIO - INTERFONES, CIRCUï¿½TO FECHADO DE TV, PORTEIRO ELETRï¿½NICO E DEMAIS EQUIP. ELETRï¿½NICOS</option>
 							 
-						               <option value="1200172*CONDOMÍNIO - PAINEIS DE COMANDO DE ELEVADORES">CONDOMÍNIO - PAINEIS DE COMANDO DE ELEVADORES</option>
+						               <option value="1200172*CONDOMï¿½NIO - PAINEIS DE COMANDO DE ELEVADORES">CONDOMï¿½NIO - PAINEIS DE COMANDO DE ELEVADORES</option>
 							 
 						               <option value="1200447*DEMAIS BENS">DEMAIS BENS</option>
 							 
 						               <option value="1200173*DEMAIS EQUIPAMENTOS">DEMAIS EQUIPAMENTOS</option>
 							 
-						               <option value="1000003*ELETRôNICOS">ELETRôNICOS</option>
+						               <option value="1000003*ELETRï¿½NICOS">ELETRï¿½NICOS</option>
 							 
-						               <option value="1000002*ELETRODOMéSTICOS">ELETRODOMéSTICOS</option>
+						               <option value="1000002*ELETRODOMï¿½STICOS">ELETRODOMï¿½STICOS</option>
 							 
-						               <option value="1000004*EQUIPAMENTOS DE INFORMáTICA">EQUIPAMENTOS DE INFORMáTICA</option>
+						               <option value="1000004*EQUIPAMENTOS DE INFORMï¿½TICA">EQUIPAMENTOS DE INFORMï¿½TICA</option>
 							 
-						               <option value="1001645*EQUIPAMENTOS DE SEGURANèA">EQUIPAMENTOS DE SEGURANèA</option>
+						               <option value="1001645*EQUIPAMENTOS DE SEGURANï¿½A">EQUIPAMENTOS DE SEGURANï¿½A</option>
 							 
 						               <option value="1000005*EQUIPAMENTOS DE TELEFONIA">EQUIPAMENTOS DE TELEFONIA</option>
 							 
@@ -166,19 +166,19 @@
 							 
 						               <option value="8000018*GRUPO TESTE KLEBER">GRUPO TESTE KLEBER</option>
 							 
-						               <option value="1001026*MóVEIS E UTENSíLIOS">MóVEIS E UTENSíLIOS</option>
+						               <option value="1001026*Mï¿½VEIS E UTENSï¿½LIOS">Mï¿½VEIS E UTENSï¿½LIOS</option>
 							 
 						               <option value="1200461*MAQUINISMO">MAQUINISMO</option>
 							 
 						               <option value="7001050*MAQUINISMOTSTDECIO">MAQUINISMOTSTDECIO</option>
 							 
-						               <option value="1200000*MERCADORIAS E MATÉRIAS-PRIMAS">MERCADORIAS E MATÉRIAS-PRIMAS</option>
+						               <option value="1200000*MERCADORIAS E MATï¿½RIAS-PRIMAS">MERCADORIAS E MATï¿½RIAS-PRIMAS</option>
 							 
 						               <option value="1001057*OBJETOS DE USO PESSOAL">OBJETOS DE USO PESSOAL</option>
 							 
 						               <option value="999999*OUTROS" selected>OUTROS</option>
 							 
-						               <option value="1002413*SAÚDE">SAÚDE</option>
+						               <option value="1002413*SAï¿½DE">SAï¿½DE</option>
 							 
 						               <option value="8000006*TESTE">TESTE</option>
 							 
@@ -188,9 +188,9 @@
 							 
 						               <option value="7002052*TESTE CERVENKA MULTIPLO 3">TESTE CERVENKA MULTIPLO 3</option>
 							 
-						               <option value="7002050*TSTDECIODESVALORIZAèãO">TSTDECIODESVALORIZAèãO</option>
+						               <option value="7002050*TSTDECIODESVALORIZAï¿½ï¿½O">TSTDECIODESVALORIZAï¿½ï¿½O</option>
 							 
-						               <option value="1001050*UTENSíLIOS">UTENSíLIOS</option>
+						               <option value="1001050*UTENSï¿½LIOS">UTENSï¿½LIOS</option>
 					               </select>
 					
 	               </td>
@@ -581,6 +581,8 @@
 
     function detectaAndroid() {
 
+      alert(navigator.userAgent.toLowerCase());
+
         var isPlataform = navigator.userAgent.toLowerCase();
         var isAndroid = isPlataform.indexOf("android") > -1;
 
@@ -623,7 +625,7 @@
             {
                 //NOVO
                 var r = "";
-
+				alert(detectaAndroid());
                 if (detectaAndroid() == true) {
                     campo.value = limpaCampoAndroid(campo.value);
                     r = "true";
