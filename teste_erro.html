@@ -622,6 +622,7 @@
 			
 				var r = "";
 				
+				campo.value = limpaCampoAndroid(campo.value);
 				if(detectaAndroid() == true){
 					campo.value = limpaCampoAndroid(campo.value);
 					r = "true"
