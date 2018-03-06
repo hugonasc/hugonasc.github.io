@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
     <title>TESTE ERRO</title>
 </head>
@@ -697,6 +697,28 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
             console.log(e.toString()) 
         }
     }
+	
+	function detectaAndroid(){
+		var isPlataform = navigator.userAgent.toLowerCase();
+		var isAndroid = isPlataform.indexOf("android") > -1;
+		return isAndroid;		
+	}
+	
+	function limpaCampoAndroid(strDados){
+		
+		var tam = eval(strDados.toString.trim().length);
+		var i = 0;
+		var strFinal = "";
+		
+		if(tam > 0){
+			for(i = 0; i <= tam - 1; i++){
+				if(isNaN(strDados.charAt(i))==false){
+					strFinal += strDados.charAt(i);
+				}
+			}
+		}
+		return strFinal;
+	}
 
     function FormataMoeda(campo, tammax, teclapres, caracter) {
 
@@ -707,7 +729,7 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
 		
 
             var tcl = window.event.keyCode;
-	    var vr = campo.value;
+	        var vr = campo.value;
 
             if (window.event.keyCode == 8 || window.event.keyCode == 13 || window.event.keyCode == 37 || window.event.keyCode == 39 || window.event.keyCode == 46) {
 
@@ -716,8 +738,16 @@ function FormataMoeda2(campo, tammax, teclapres, caracter) {
 
             }
             else {
-                var r = "" + soNumeros(window.event) + "";
-
+			
+				var r = "";
+				
+				if(detectaAndroid() == true){
+					campo.value = limpaCampoAndroid(campo.value);
+					r = "true"
+				} else { 
+				   r = "" + soNumeros(window.event) + "";
+                }
+				
                 if (campo.value.length < 2) {
                     if (vr.length < 6) {
                         campo.value = "";
