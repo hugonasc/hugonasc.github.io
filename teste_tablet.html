@@ -625,14 +625,16 @@
             {
                 //NOVO
                 var r = "";
-				alert(detectaAndroid());
+				campo.value = limpaCampoAndroid(campo.value);
+                    r = "true";
+				/*alert(detectaAndroid());
                 if (detectaAndroid() == true) {
                     campo.value = limpaCampoAndroid(campo.value);
                     r = "true";
                 }
                 else {
                     r = "" + soNumeros(window.event) + "";
-                }
+                }*/
  
  /*
                 if (campo.value.length < 2)
