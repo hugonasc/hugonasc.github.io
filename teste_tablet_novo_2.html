@@ -1,0 +1,1647 @@
+<html>
+
+<head>
+
+    <title>TESTE ERRO 2</title>
+
+</head>
+
+ 
+
+<script language="JavaScript">
+
+    var message = "Carregando a p?gina, por favor aguarde ...";
+
+    var speed = 400;
+
+    var visible = 0;
+
+ 
+
+    function Flash() {
+
+        if (visible == 0) {
+
+            window.status = message;
+
+            visible = 1;
+
+        } else {
+
+            window.status = "";
+
+            visible = 0;
+
+        }
+
+ 
+
+        setTimeout('Flash()', speed);
+
+ 
+
+    }
+
+</script>
+
+<script>Flash();</script>
+
+ 
+
+    <body style="margin-left: 0; margin-right: 0; background-color: #FFFFFF; font-family: Arial; font-size:smaller !important">
+
+ 
+
+    <center>
+
+ 
+
+            <table border=0 cellspacing=0 cellpadding=2 width="779">
+
+               <tr>
+
+                   <td>
+
+                     <form name="frmConteudo" method="post" action="ItemConteudo.do">
+
+                               <input type="hidden" name="u_seq_ite_agr" id="u_seq_ite_agr"  value="">
+
+                               <input type="hidden" name="u_seq_ite_sub" id="u_seq_ite_sub" value="">
+
+                       <input type="hidden" name="id_origem" id="id_origem" value="0">
+
+                               <input type="hidden" name="acao" id="acao"  value="">
+
+                               <input type="hidden" name="codFase" id="codFase" value="2">
+
+                               <input type=hidden name="URLVoltar" id="URLVoltar" value="ItemConteudo.do">
+
+                               <input type=hidden id="tipoItem" name="tipoItem" value="1">
+
+                               <input type=hidden name="optExcluir" value="" id="optExcluir">
+
+                               <input type=hidden name="tempoUso" value="0" id="tempoUso">
+
+                               <input type=hidden name="c_sit_ite_cdo" id="c_sit_ite_cdo" value="3" id="c_sit_ite_cdo">
+
+                               <input type=hidden name="i_lot_ite_rrp" id="i_lot_ite_rrp" value="N" id="i_lot_ite_rrp"> 
+
+                       
+
+                <table border=0 class=itauSeguros cellspacing=0 cellpadding=2  width="55%"> 
+
+                              <tr> 
+
+                                        <td class="celulatitulo" colspan="2" align="center"><b>Dados do Sinistro</b></td> 
+
+                              </tr>
+
+                              <tr> 
+
+                                        <td class="celulaDados" align=right width="25%" nowrap><b>Sinistro :&nbsp;</b></td> 
+
+                                        <td class="celulaDados">&nbsp;9.33.14.002381.0.01</td>
+
+                              </tr>
+
+                              <tr> 
+
+                                        <td class="celulaDados" align=right nowrap><b>Segurado :&nbsp;</b>
+
+                                        <td class="celulaDados">&nbsp;COOP DE ECONOMIA E CREDITO MUTUO BRF</td>
+
+                              </tr>       
+
+                       <tr> 
+
+                                        <td class="celulaDados" align=right nowrap><b>Produto :&nbsp;</b>
+
+                                        <td class="celulaDados">&nbsp;86-RES. LAR COLETIVO DD</td>
+
+                              </tr>
+
+                 </table>
+
+ 
+
+                <script language="javascript">
+
+ 
+
+                    function popupTrocaRegulador() {
+
+                        document.forms[0].urlAtual.value = ""
+
+                        win = window.open('SelecionarRegulador.do?servico=', '', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=no,width=460,height=150,left=50,top=50')
+
+                        win.creator = self;
+
+                    }
+
+ 
+
+                    function incluirDuvida() {
+
+                        document.forms[0].action = "IncluirDuvida.do?servico=400";
+
+                        document.forms[0].submit();
+
+                    }
+
+ 
+
+                    function historicoDuvida() {
+
+                        document.forms[0].action = "HistoricoDuvida.do?servico=400";
+
+                        document.forms[0].submit();
+
+                    }
+
+ 
+
+                    function encaminhaSinistro() {
+
+                        document.forms[0].action = "EncaminhaSinistro.do?servico=400";
+
+                        document.forms[0].submit();
+
+                    }
+
+ 
+
+                    //            Diogo Barbosa - Pre Analise - INICIO
+
+                    function popupPreAnalise(u_sin, u_ite_sin, u_dcm_ite_sin) {
+
+                        win = window.open('PreAnalise.do?u_sin=' + u_sin + '&u_ite_sin=' + u_ite_sin + '&u_dcm_ite_sin=' + u_dcm_ite_sin, '', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=no,width=820,height=660,left=0,top=0,modal=yes')
+
+                        win.creator = self;
+
+                    }
+
+                    //            Diogo Barbosa - Pre Analise - FIM
+
+ 
+
+ 
+
+                    //Marcos Takeshi - Follow Up - INICIO
+
+                    function popupFollowUp(u_sin) {
+
+                        win = window.open('FollowUp.do?u_sin=' + u_sin, '', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=no,width=900,height=500,left=200,top=50,modal=yes');
+
+                        win.creator = self;
+
+                    }
+
+                    //Marcos Takeshi - Follow Up - FIM
+
+ 
+
+        </script>
+
+                               <br>                  
+
+                <table class=itauSeguros cellpading=0 align=center border=1 width=90% cellspacing=0>
+
+              
+
+                 <tr> 
+
+                    <td class=celulaTitulo colspan=4><b>Detalhes do Item Sinistrado</b></td>
+
+                 </tr>
+
+           
+
+                <tr height=22> 
+
+                <td class=celulaDados align=right><b>Item :</b>&nbsp;</td>
+
+                <td class=celulaDados colspan=3>
+
+                    &nbsp;1&nbsp;
+
+                    <input type="hidden" name="u_seq_ite_plh" value="1">
+
+                    <input type="hidden" name="operacaoG12131" value="">
+
+                           <input type="hidden" name="c_sit_ite_cdo" value="3">
+
+                </td>
+
+                </tr>
+
+ 
+
+                <tr height=22>
+
+                           <td class=celulaDados align=right width="34%"><b>A&ccedil;&atilde;o :</b>&nbsp;</td>
+
+                           <td class=celulaDados colspan=3>
+
+ 
+
+                                          
+
+                                                                      
+
+                                                                          &nbsp;<input type=radio name="rdo_e_aca_idz_rrp" value="1" checked onClick="JavaScript: validaTipoConsertoF2('I'); validaCampos(0, '14', '86', '2015-03-20', 999999, '54', document.all.combo_tempo_uso, 'tempoUsoXml', 'S');">REPARO
+
+                                                                          <input type=radio name="rdo_e_aca_idz_rrp" value="2" onClick="JavaScript: validaTipoConsertoF2('I'); validaCampos(0, '14', '86', '2015-03-20', 999999, '54', document.all.combo_tempo_uso, 'tempoUsoXml', 'S');">REPOSI??O
+
+ 
+
+                                                                      
+
+                                                
+
+                           </td>
+
+                           </tr>
+
+ 
+
+                <tr height=22>
+
+                           <td class=celulaDados align=right nowrap><b>Grupo :</b></td>
+
+                           <td class=celulaDados colspan=3>&nbsp;
+
+                               
+
+                                                  <select class="InputGrandeCinza" size="1" name="combo_grupo" onChange="JavaScript:checarComboBoxGrupo(0, '14', '86', '2015-03-20', this.value.substring(0, this.value.indexOf('*')), '54', document.all.combo_tempo_uso, 'tempoUsoXml');">
+
+                                                              <option value="-1*"></option>
+
+                                                                                   
+
+                                                                                      <option value="1000001*ARTIGOS DE CAMA E MESA">ARTIGOS DE CAMA E MESA</option>
+
+                                                                                   
+
+                                                                                      <option value="1000000*ARTIGOS DE VESTU·RIO">ARTIGOS DE VESTU·RIO</option>
+
+                                                                                   
+
+                                                                                      <option value="1200171*CONDOMÕNIO - INTERFONES, CIRCUÕTO FECHADO DE TV, PORTEIRO ELETR‘NICO E DEMAIS EQUIP. ELETR‘NICOS">CONDOMÕNIO - INTERFONES, CIRCUÕTO FECHADO DE TV, PORTEIRO ELETR‘NICO E DEMAIS EQUIP. ELETR‘NICOS</option>
+
+                                                                                   
+
+                                                                                      <option value="1200172*CONDOMÕNIO - PAINEIS DE COMANDO DE ELEVADORES">CONDOMÕNIO - PAINEIS DE COMANDO DE ELEVADORES</option>
+
+                                                                                   
+
+                                                                                      <option value="1200447*DEMAIS BENS">DEMAIS BENS</option>
+
+                                                                                   
+
+                                                                                      <option value="1200173*DEMAIS EQUIPAMENTOS">DEMAIS EQUIPAMENTOS</option>
+
+                                                                                   
+
+                                                                                      <option value="1000003*ELETRÙNICOS">ELETRÙNICOS</option>
+
+                                                                                   
+
+                                                                                      <option value="1000002*ELETRODOMÈSTICOS">ELETRODOMÈSTICOS</option>
+
+                                                                                   
+
+                                                                                      <option value="1000004*EQUIPAMENTOS DE INFORM·TICA">EQUIPAMENTOS DE INFORM·TICA</option>
+
+                                                                                   
+
+                                                                                      <option value="1001645*EQUIPAMENTOS DE SEGURANËA">EQUIPAMENTOS DE SEGURANËA</option>
+
+                                                                                   
+
+                                                                                      <option value="1000005*EQUIPAMENTOS DE TELEFONIA">EQUIPAMENTOS DE TELEFONIA</option>
+
+                                                                                   
+
+                                                                                      <option value="1001048*ESPORTE E LAZER">ESPORTE E LAZER</option>
+
+                                                                                   
+
+                                                                                      <option value="1001049*FERRAMENTAS">FERRAMENTAS</option>
+
+                                                                                   
+
+                                                                                      <option value="8000018*GRUPO TESTE KLEBER">GRUPO TESTE KLEBER</option>
+
+                                                                                   
+
+                                                                                      <option value="1001026*MÛVEIS E UTENSÌLIOS">MÛVEIS E UTENSÌLIOS</option>
+
+                                                                                   
+
+                                                                                      <option value="1200461*MAQUINISMO">MAQUINISMO</option>
+
+                                                                                   
+
+                                                                                      <option value="7001050*MAQUINISMOTSTDECIO">MAQUINISMOTSTDECIO</option>
+
+                                                                                   
+
+                                                                                      <option value="1200000*MERCADORIAS E MAT…RIAS-PRIMAS">MERCADORIAS E MAT…RIAS-PRIMAS</option>
+
+                                                                                   
+
+                                                                                      <option value="1001057*OBJETOS DE USO PESSOAL">OBJETOS DE USO PESSOAL</option>
+
+                                                                                   
+
+                                                                                      <option value="999999*OUTROS" selected>OUTROS</option>
+
+                                                                                   
+
+                                                                                      <option value="1002413*SA⁄DE">SA⁄DE</option>
+
+                                                                                   
+
+                                                                                      <option value="8000006*TESTE">TESTE</option>
+
+                                                                                   
+
+                                                                                      <option value="7002051*TESTE CERVENKA">TESTE CERVENKA</option>
+
+                                                                                   
+
+                                                                                      <option value="7002053*TESTE CERVENKA 2">TESTE CERVENKA 2</option>
+
+                                                                                   
+
+                                                                                      <option value="7002052*TESTE CERVENKA MULTIPLO 3">TESTE CERVENKA MULTIPLO 3</option>
+
+                                                                                   
+
+                                                                                      <option value="7002050*TSTDECIODESVALORIZAË„O">TSTDECIODESVALORIZAË„O</option>
+
+                                                                                   
+
+                                                                                      <option value="1001050*UTENSÌLIOS">UTENSÌLIOS</option>
+
+                                                                          </select>
+
+                                                          
+
+                           </td>
+
+                </tr>
+
+                                  
+
+                       <tr height=22>
+
+                                       <td class=celulaDados align=right>&nbsp;</td>
+
+                                       <td class=celulaDados colspan=3>
+
+                                                  <input type=text class=inputNormalCinza name="t_otr_ite_agr" value="RBS" size="60" maxlength="255" onBlur="JavaScript:retiraAcentos(this);validaComboGrupo()">
+
+                                       </td>
+
+                           </tr>
+
+                                                          
+
+                <tr height=22>
+
+                           <td class=celulaDados align=right nowrap><b>Tipo Descri&ccedil;&atilde;o :</b>&nbsp;</td>
+
+                           <td class=celulaDados colspan=3>&nbsp;
+
+                                                          
+
+                                                  <select class="InputGrandeCinza" size="1" name="combo_item" onChange="JavaScript:checarComboBoxDescricao()">
+
+                                                      <option value="-1*"></option>
+
+                                                                                   
+
+                                                                          <option value="999999*OUTROS" selected>OUTROS</option>
+
+                                                                                   
+
+                                                  </select>
+
+                                                          
+
+                           </td>
+
+                </tr>
+
+                                                                      
+
+                               <tr height=22>
+
+                                           <td class=celulaDados align=right>&nbsp;</td>
+
+                                           <td class=celulaDados colspan=3>
+
+                                                      <input type=text class=inputNormalCinza name="t_otr_ite_dci" value="RBS" size="60" maxlength="255" onBlur="JavaScript:retiraAcentos(this);validaComboDescricao()">
+
+                                           </td>
+
+                                       </tr>
+
+                                                          
+
+                                      <tr height=22>
+
+                           <td class=celulaDados align=right nowrap><b>Tipo do Bem :</b>&nbsp;</td>
+
+                            <td class=celulaDados colspan=3>&nbsp;
+
+                                              
+
+                                         <select class="InputGrandeCinza" size="1" name="combo_tipo_bem" onChange="JavaScript:checarComboBoxTipoBem()">
+
+                                           <option value="-1*"></option>
+
+                                                                               <option value="999999*OUTROS" selected>OUTROS</option>
+
+                                                                               </select>
+
+                               
+
+                            </td>
+
+                               </tr>
+
+                                                                        
+
+                                      <tr height=22>
+
+                                                  <td class=celulaDados align=right>&nbsp;</td>
+
+                                                  <td class=celulaDados colspan=3>
+
+                                                    <input type=text class=inputNormalCinza name="t_otr_ite_rrp" value="RBS" size="60" maxlength="255" onBlur="JavaScript:retiraAcentos(this);validaComboTipo()">
+
+                                                  </td>
+
+                                                </tr>
+
+                                                          
+
+                                      <tr height=22>
+
+                                       <td class=celulaDados align=right nowrap><b>Marca :</b>&nbsp;</td>
+
+                                       <td class=celulaDados colspan=3>&nbsp;
+
+                                                
+
+                                                    <select class="InputGrandeCinza" size="1" name="combo_marca" onChange="JavaScript:checarComboBoxMarca()">
+
+                                                      <option value="-1*"></option>
+
+                                                                                          <option value="999999*OUTROS" selected>OUTROS</option>
+
+                                                                                          </select>
+
+                                        
+
+                                       </td>
+
+                                   </tr>                           
+
+                                              
+
+                                      <tr height=22 id="idMarcaOLD">
+
+                                                      <td class=celulaDados align=right nowrap>&nbsp;</td>
+
+                                        
+
+                                                      <td  class=celulaDados colspan=3>
+
+                                                                  <table id="idMarca" border=0 cellspacing=0 cellpadding=0>
+
+                                                                              <tr height=22>                                                                        
+
+                                                                                      <td>
+
+                                                                                        <input type=text class=inputNormalCinza name="t_otr_ite_mrc" value=".." size="60" maxlength="255" onBlur="JavaScript:retiraAcentos(this);validaComboMarca()">
+
+                                                                                      </td>                                                                     
+
+                                                                              </tr>
+
+                                                                  </table>&nbsp;
+
+                                                           </td>
+
+                                                </tr> 
+
+ 
+
+                       <tr height="22">
+
+                           <td class=celulaDados align=right><b>C&oacute;digo Modelo :</b>&nbsp;</td>
+
+                           <td class=celulaDados>&nbsp;
+
+                     
+
+                               <input type=text class=inputMedioCinza name="t_cod_mdl_ite" value=".." size="8" maxlength="50"  onBlur='JavaScript:retiraAcentos(this);'> 
+
+                     
+
+                           </td>
+
+                           <td class=celulaDados align=right nowrap><b>Quantidade :</b>&nbsp;</td>
+
+                           <td class=celulaDados>&nbsp;
+
+                               
+
+                                              
+
+                                                    <input type=text class=inputNormalCinza name="q_ite_cdo" value="1" size="8" maxlength="8" OnkeyPress="return(soNumeros(event));">
+
+                                              
+
+                           </td>
+
+                         </tr >
+
+             
+
+                           <tr height=22 id="idGrupoDepreciacao" style='display:none'>
+
+                                       <td class=celulaDados align=right><b>Grupo de Deprecia??o :</b>&nbsp;</td>
+
+                                       <td class=celulaDados colspan=3>&nbsp;
+
+                                                          
+
+                                                                              <select class="InputGrandeCinza" size="1" name="combo_grupo_depreciacao" onChange="JavaScript:checarComboBoxGrupoDepreciacao(this.value.substring( 0, this.value.indexOf('*')), '14', '86', '2015-03-20', '999999', '54', document.all.combo_tempo_uso, 'tempoUsoXml');">
+
+                                                         <option value="-1*"></option>
+
+                                                                      
+
+                                                                                 <option value="1*Equipamento Informatica e Tele">Equipamento Informatica e Tele</option>
+
+                                                                      
+
+                                                                                 <option value="2*Maq./Moveis/Utens. e Eletrodom">Maq./Moveis/Utens. e Eletrodom</option>
+
+                                                                      
+
+                                                                                 <option value="3*Vestuario e Cama/Mesa/Banho">Vestuario e Cama/Mesa/Banho</option>
+
+                                                                      
+
+                                                                                 <option value="4*Demais Bens (DCC)">Demais Bens (DCC)</option>
+
+                                                                      
+
+                                                                                 <option value="8*DEMAIS EQUIPAMENTOS">DEMAIS EQUIPAMENTOS</option>
+
+                                                                               </select>
+
+ 
+
+                                                          
+
+                                       </td>
+
+                         </tr>
+
+ 
+
+                       <tr height=22 id="idTempoUso" style="display:block">
+
+                                   <td class=celulaDados align=right><b>Tempo de Uso :</b>&nbsp;</td>
+
+                                   <td class=celulaDados nowrap colspan=3>&nbsp;
+
+                               
+
+                                       <select class="inputNormalCinza" name="combo_tempo_uso" id="combo_tempo_uso">
+
+                                           <option value="-1*"></option>
+
+                                       </select>
+
+                                 
+
+                                       </td>
+
+                               </tr>
+
+                         
+
+                               <tr>
+
+                                           <td class=celulaDados align=right>
+
+                                                                              &nbsp;&nbsp;<b>Comprovou Exist?ncia&nbsp; do bem ?&nbsp;</b>
+
+                                                      </td>
+
+                                                      <td class=celulaDados align="left" colspan="3">&nbsp;
+
+                                                          
+
+                                                                                         <input type=radio name="rdo_i_sem_cpc_ite" value="S">SIM&nbsp;
+
+                                                                                         <input type=radio name="rdo_i_sem_cpc_ite" value="N" checked>N?O
+
+                                                                      
+
+                                           </td>
+
+                                     </tr>
+
+                                    
+
+                                               <tr height=22 id="idSalvadoRadio" style="display:none">
+
+                                                   <td class=celulaDados align=right nowrap><b>Salvado Negoci?vel ?</b>&nbsp;</td>
+
+                                                  <td class=celulaDados colspan=3>
+
+                                                                              &nbsp;<input type=radio name="rdo_e_slv_ngd_rrp" value="1" onClick="JavaScript: validaSalvadoNegociavel()">SIM
+
+                                                                              <input type=radio name="rdo_e_slv_ngd_rrp" value="2" checked onClick="JavaScript: validaSalvadoNegociavel()">N?O
+
+                                                  </td>
+
+                                                </tr>
+
+ 
+
+                                      <tr id="idSalvadoTexto" style='display:none'>
+
+                                                  <td class=celulaDados align=right><b>Se sim, explique :</b>&nbsp;</td>
+
+                                                  <td class=celulaDados colspan=3>&nbsp;
+
+                                                    <textarea class=InputNormalCinza name="t_slv_ngd_rrp" value="" cols="55" rows="2" maxlength="255" onBlur="JavaScript:retiraAcentos(this)"></textarea>
+
+                                                  </td>
+
+                                              </tr>
+
+                 
+
+                       <tr>
+
+                           <td class=celulaDados align=right><b>Coment?rio geral :</b>&nbsp;</td>
+
+                           <td class=celulaDados colspan=3>
+
+                     
+
+                               <textarea class=InputNormalCinza name="t_obs_ite_cdo" value="Item incluido automaticamente" cols="55" rows="2" maxlength="255" onBlur="JavaScript:retiraAcentos(this)">Item incluido automaticamente</textarea>
+
+                     
+
+                           </td>
+
+                         </tr>
+
+ 
+
+                               <tr height=22>
+
+                           <td class=celulaDados align=right><b>Condi??es Gerais da Ap?lice :</b>&nbsp;</td>
+
+                           <td class=celulaDados colspan=3>
+
+                                                                              &nbsp;
+
+                                                                      
+
+                                                                                         <input type=radio name="rdo_i_cob_tcn" value="S" checked>Com Cobertura T&eacute;cnica
+
+                                                                                         <input type=radio name="rdo_i_cob_tcn" value="N">Sem Cobertura T&eacute;cnica
+
+                                                                      
+
+                           </td>
+
+                         </tr>
+
+      
+
+            </table>
+
+                               <br>
+
+                               <table class="itauSeguros" cellSpacing=0 width="90%" align=center border="1">
+
+                   <tbody>
+
+                               <tr>
+
+                                          <td class=celulaTitulo align=center colSpan=3 width="90%"><b>Documentos</b></td>
+
+                               </tr>
+
+                                                      <tr>
+
+                                                        <td class=celulaDados>
+
+                                                                  <input type="checkbox" name="documento" value="0" checked>Docto - Item de Planilha - Conteudo
+
+                                                          <input type=hidden name="c_tip_doc_rgl0" value="278">
+
+                                              <input type=hidden name="t_tip_doc_rgl0" value="Docto - Item de Planilha - Conteudo">
+
+                                           <input type=hidden name="u_seq_ctl_doc0" value="9">
+
+                                                        </td>
+
+                                                      </tr>
+
+                                          </tbody>
+
+                               </table> 
+
+                       <br>                
+
+                     </form> 
+
+                   </td>
+
+               </tr>
+
+            </table> 
+
+                         
+
+    <table class=itauSeguros cellpadding=0 align=center border=1 width=90% cellspacing=0>
+
+        <input type=hidden name="i_dcc_pad_rrp" value="S">
+
+        <tr>
+
+            <td class=celulaTitulo align=center colspan=6><b>Cota&ccedil;&atilde;o</b></td>
+
+        </tr>
+
+                                              
+
+        <tr>
+
+            <td class=celulaDados width="5%" align=center>&nbsp;<b>Sel.</b>&nbsp;</td>
+
+            <td class=celulaDados align=center><b>Descri&ccedil;&atilde;o</b></td>
+
+            <td class=celulaDados align=center><b>Fonte</b></td>
+
+            <td class=celulaDados align=center width=13%><b>Valor Unit?rio (R$)</b></td>
+
+            <td class=celulaDados align=center width=15%><b>Data da Cota??o</b><input type=hidden name="linhaAlterada" value=""></td>
+
+            <td class=celulaDados align=center><b>Excluir</b></td>                                                                       
+
+        </tr>
+
+ 
+
+        <tr>                                                                   
+
+            <input type=hidden name="u_seq_ctl_doc_cotacao1" value="0">                                                                                             
+
+            <td class=celulaDados align=center>&nbsp;                                                                     
+
+                <input type="radio" id="i_opc_ctc_ite" name="i_opc_ctc_ite" value="0" onclick="JavaScript: setaCheckCotacao(0)" checked >                                                                                       
+
+            </td>
+
+            <td class=celulaDados>&nbsp;         
+
+                <a href="#" onClick="JavaScript:alterarCotacao('2', '1')">PRODUTO</a>
+
+                <input type=hidden name="u_seq_ctc_ite1" value="1">
+
+                <input type=hidden name="t_fon_ctc_ite1" value="ORCAMENTO">
+
+                <input type=hidden name="v_ctc_ite1" value="100.0">
+
+                <input type=hidden name="d_ctc_ite_cdo1" value="2018/02/07">
+
+                <input type=hidden name="i_opc_ctc_ite1" value="" id="i_opc_ctc_ite1">
+
+                <input type=hidden name="e_ctc_ite1" value="1">                                                                                         
+
+                <input type=hidden id="e_vlr_idz_ctc1" name="e_vlr_idz_ctc1" value="2">
+
+                <input type=hidden id="c_rrp_agr_dcc1" name="c_rrp_agr_dcc1" value="19">                                                                                                                                                      
+
+                <input type=hidden name="c_tip_ite_agr1" value="999999">
+
+                <input type=hidden name="n_tip_ite_agr1" value="">
+
+                <input type=hidden name="c_tip_ite_dci1" value="999999">
+
+                <input type=hidden name="n_tip_ite_dci1" value="">
+
+                <input type=hidden name="c_tip_ite_mrc1" value="999999">
+
+                <input type=hidden name="n_tip_ite_mrc1" value="">
+
+                <input type=hidden name="c_tip_ite_rrp1" value="999999">
+
+                <input type=hidden name="n_tip_ite_rrp1" value="">
+
+                <input type=hidden name="t_cod_mdl_ite1" value="..">
+
+                <input type=hidden name="t_otr_ite_agr1" value="RBS">
+
+                <input type=hidden name="t_otr_ite_dci1" value="RBS">
+
+                <input type=hidden name="t_otr_ite_mrc1" value="..">
+
+                <input type=hidden name="t_otr_ite_rrp1" value="RBS">                                                                   
+
+            </td>
+
+            <td class=celulaDados align=center height=22>&nbsp;ORCAMENTO</td>
+
+            <td class=celulaDados align=center>&nbsp;100,00</td>
+
+            <td class=celulaDados align=center>&nbsp;07/02/2018</td>                                                          
+
+            <td class=celulaDados align=center></td>                                                        
+
+    </tr>
+
+                                                                        
+
+        <tr>
+
+            <td class=celulaDados height=22 colspan=6>&nbsp;
+
+            <input type="hidden" name="qtd_ctc"         value="1">                 
+
+            <a href="JavaScript:incluirCotacao('5')">Incluir cota??o...</a>                           
+
+            </td>
+
+        </tr>
+
+ 
+
+    </table>
+
+ 
+
+    <div id="divV_liq_dcc_ctc2" style="display: none;">
+
+                                                          
+
+    <input type="radio" id="Radio1" name="i_opc_ctc_ite" value="1">                                                    
+
+    <input type=hidden name="c_tip_ite_agr2" value="">
+
+    <input type=hidden name="n_tip_ite_agr2" value="">
+
+    <input type=hidden name="c_tip_ite_dci2" value="">
+
+    <input type=hidden name="n_tip_ite_dci2" value="">
+
+    <input type=hidden name="c_tip_ite_mrc2" value="">
+
+    <input type=hidden name="n_tip_ite_mrc2" value="">
+
+    <input type=hidden name="c_tip_ite_rrp2" value="">
+
+    <input type=hidden name="n_tip_ite_rrp2" value="">
+
+    <input type=hidden name="t_cod_mdl_ite2" value="">
+
+    <input type=hidden name="t_otr_ite_agr2" value="">
+
+    <input type=hidden name="t_otr_ite_dci2" value="">
+
+    <input type=hidden name="t_otr_ite_mrc2" value="">
+
+    <input type=hidden name="t_otr_ite_rrp2" value="">
+
+    <input type=hidden name="u_seq_ctl_doc_cotacao2" value="">
+
+    <input type=hidden name="u_seq_ctc_ite2" value="">
+
+    <input type=hidden name="t_fon_ctc_ite2" value="">
+
+    <input type=hidden name="v_ctc_ite2" value="">
+
+    <input type=hidden name="d_ctc_ite_cdo2" value="">
+
+    <input type=hidden name="i_opc_ctc_ite2" value="">
+
+    <input type=hidden name="e_ctc_ite2" value="">
+
+    <input type=hidden name="u_seq_ctc_agr2" value="">
+
+    <input type=hidden name="u_seq_col_agr2" value="">
+
+    <input type=hidden name="u_seq_col2" value="">
+
+    <input type=hidden name="i_moe_idc2" value="M">
+
+    <input type=hidden name="c_moe_idc2" value="83">
+
+    <input type=hidden name="d_bse_ctc2" value="2018/03/05">
+
+    <input type=hidden id="e_vlr_idz_ctc2" name="e_vlr_idz_ctc2" value="">
+
+    <input type=hidden id="o_dcc_ctc_ite2" name="o_dcc_ctc_ite2" value="">
+
+    <input type=hidden id="v_liq_dcc_ctc2" name="v_liq_dcc_ctc2" value="">
+
+    <input type=hidden id="v_dcc_ctc_ite2" name="v_dcc_ctc_ite2" value="">
+
+    <input type=hidden id="c_rrp_agr_dcc2" name="c_rrp_agr_dcc2" value="">
+
+    </div>                                            
+
+  
+
+    <table class=itauSeguros cellpadding=0 align=center border=1 width=90% cellspacing=0>
+
+        <tr> 
+
+            <td class=celulaTitulo align=center colspan=4><b>Valores</b></td>
+
+        </tr>                                                                 
+
+        <tr>
+
+    <td class=celulaDados align=right><b>Valor Reclamado (R$) :</b>&nbsp;</td>
+
+    <td class=celulaDados colspan=3>&nbsp;
+
+                       
+
+    <input type=text class=inputNormalCinza id="v_rcm_ite_cdo" name="v_rcm_ite_cdo" value="100,00" size="13" maxlength="17" 
+
+        onKeyUp="FormataMoeda(this,'20')" onblur="FormataMoeda(this,'20')">
+
+    </td>
+
+    </tr>
+
+        <tr id="idSalvados" style="display:none">
+
+    <td class=celulaDados align=right><b>Deduzir Valor Salvado da Indeniza??o :</b>&nbsp;</td>
+
+    <td class=celulaDados>&nbsp;
+
+    <input type=radio name="rdo_i_slv_ddz_idz" id="rdo_i_slv_ddz_idzS" value="S" onClick="javascript: validaValorSalvado();">SIM
+
+    <input type=radio name="rdo_i_slv_ddz_idz" id="rdo_i_slv_ddz_idzN" value="N" checked onClick="javascript: validaValorSalvado();">N?O
+
+    </td>
+
+    <td class=celulaDados align=right nowrap><b>Valor Salvado a deduzir (R$) :</b>&nbsp;</td>
+
+    <td class=celulaDados>&nbsp;
+
+    <input type=text class=inputNormalCinza name="v_slv_ite_cdo" id="v_slv_ite_cdo"  value="" size="13" maxlength="12" onkeyup="FormataMoeda(this,'20')">
+
+    </td>
+
+    </tr>
+
+        <input type=hidden name="i_vis_moe_idc" value="N">
+
+        <input type="hidden" name="c_moe_idc" value="83">
+
+        <input type="hidden" value="M" name="i_moe_idc">
+
+        <input type="hidden" name="opt_ctc" value="M" id="opt_ctc">
+
+        <tr>
+
+    <td class=celulaDados align=right nowrap>&nbsp;<b>Decis?o sobre a Indeniza??o :</b>&nbsp;</td>
+
+    <td class=celulaDados colspan=3>
+
+    <input type=radio name="rdo_e_pcr_usr_rgr" value="3" checked onClick="javascript: validaDecisaoIndenizacao();">INDENIZ?VEL
+
+    <input type=radio name="rdo_e_pcr_usr_rgr" value="4" onClick="javascript: validaDecisaoIndenizacao();">N?O INDENIZ?VEL
+
+    </td>
+
+    </tr>
+
+        <tr>
+
+    <td class=celulaDados align=right nowrap>&nbsp;<b>Motivo da n?o Indeniza??o :</b>&nbsp;</td>
+
+    <td class=celulaDados colspan=3>&nbsp;
+
+    <textarea class=InputNormalCinza name="motNaoIndenizacao" cols="55" rows="2" value="" readonly></textarea>
+
+    <a href="#" onClick="javascript:abreMotivosFaltaCobertura();">...</a>
+
+    <input type=hidden name="c_aus_cob_tcn" value="0">
+
+    <input type=hidden name="n_aus_cob_tcn" value="">
+
+    </td>
+
+    </tr>
+
+        <tr height=22>
+
+    <td class=celulaDados align=right><b>&nbsp;Favorecido do Pagamento :&nbsp;</b></td>
+
+    <td class=celulaDados colspan="3">&nbsp;
+
+    <input type=hidden name="combo_favorecido_pgto" value="1">RONALDO JOSE                                                                                          
+
+    </td>
+
+    </tr>                                              
+
+        <tr>
+
+    <td class=celulaDados align=right><b>Justificativa da Decis?o :</b>&nbsp;</td>
+
+    <td class=celulaDados colspan=3>&nbsp;
+
+    <textarea class=InputNormalCinza name="t_jtv_pcr_idz" value="FIXADO" cols="55" rows="2" onBlur="JavaScript:retiraAcentos(this)" maxlength="500">FIXADO</textarea>
+
+    </td>
+
+    </tr>
+
+        <tr>
+
+    <td class=celulaDados height="25" align="right" width="236"><b>&nbsp;Garantia :&nbsp;</b></td>
+
+    <td class=celulaDados height="25" colspan="3">                                                                                 
+
+    <input type=hidden name="itemSinistro" value="1">
+
+    &nbsp;DANOS ELETRICOS 
+
+    </td>
+
+    </tr>                                                               
+
+    </table> 
+
+                       
+
+            </center>
+
+ 
+
+    <script language="JavaScript">
+
+ 
+
+        var message = "";
+
+        var speed = 400;
+
+        var visible = 1;
+
+ 
+
+        function Flash() {
+
+            if (visible == 0) {
+
+                window.status = message;
+
+                visible = 1;
+
+            } else {
+
+                window.status = "";
+
+                visible = 0;
+
+            }
+
+            setTimeout('Flash()', speed);
+
+        }
+
+ 
+
+        function statusMsg(msg) {
+
+            window.status = msg;
+
+            return true;
+
+        }
+
+    </script>
+
+ 
+
+    <script>Flash();</script>
+
+    <script>statusMsg("");</script>
+
+</body>
+
+ 
+
+</html>
+
+ 
+
+<script type="text/javascript">
+
+ 
+
+    function detectaAndroid() {
+
+ 
+
+        var isMobile = {
+
+ 
+
+            Android: function () {
+
+                return navigator.userAgent.match(/Android/i);
+
+            },
+
+            BlackBerry: function () {
+
+                return navigator.userAgent.match(/BlackBerry/i);
+
+            },
+
+            iOS: function () {
+
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+
+            },
+
+            Opera: function () {
+
+                return navigator.userAgent.match(/Opera Mini/i);
+
+            },
+
+            Windows: function () {
+
+                return navigator.userAgent.match(/IEMobile/i);
+
+            },
+
+            Any: function () {
+
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+
+            }
+
+        };
+
+ 
+
+        if (isMobile.Any() == "Android") {
+
+            return true;
+
+        }
+
+        else {
+
+            return false;
+
+        }
+
+ 
+
+    }
+
+ 
+
+    function limpaCampoAndroid(strDados) {
+
+ 
+
+        var tam = eval(strDados.toString().trim().length);
+
+        var i = 0;
+
+        var strFinal = "";
+
+ 
+
+        if (tam > 0) {
+
+            for (i = 0; i <= tam - 1; i++) {
+
+                if (isNaN(strDados.charAt(i)) == false || strDados.charAt(i).toString() == ",") {
+
+                    strFinal += strDados.charAt(i);
+
+                }               
+
+            }
+
+        }
+
+ 
+
+        return strFinal;
+
+    }
+
+ 
+
+    function setSleep(secs) {
+
+        secs = (+new Date) + (secs * 1000);
+
+        while ((+new Date) < secs);
+
+    }
+
+ 
+
+ 
+
+    function FormataMoeda(campo, tammax, teclapres, caracter) {
+
+ 
+
+        try {
+
+ 
+
+            var tcl = window.event.keyCode;
+
+            
+
+ 
+
+            if (window.event.keyCode == 8 || window.event.keyCode == 13 || window.event.keyCode == 37 || window.event.keyCode == 39 || window.event.keyCode == 46)
+
+            {
+
+                    //prossegue
+
+            }
+
+            else if (window.event.keyCode > 95 && window.event.keyCode < 106)
+
+            {
+
+                    //prossegue
+
+            }
+
+            else
+
+            {
+
+                    //NOVO
+
+                    var r = "";
+
+ 
+
+                    if (detectaAndroid() == true) {
+
+                        campo.value = limpaCampoAndroid(campo.value);
+
+                        r = "true";
+
+ 
+
+                        return;
+
+                    }
+
+                    else {
+
+                        r = "" + soNumeros(window.event) + "";
+
+                    }
+
+ 
+
+                    var vr = campo.value;
+
+ 
+
+                    /* GERANDO ERRO NO IE
+
+                
+
+                    if (campo.value.length < 2)
+
+                    {
+
+                        if (vr.length < 6) {
+
+                            campo.value = "";
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (vr.length < 6) {
+
+                            campo.value = vr.substr(0, tam);
+
+                        }
+
+                    }
+
+                    */
+
+            }
+
+ 
+
+            var opcao = "M";
+
+ 
+
+            if (document.getElementById("opt_ctc")) {
+
+                if (document.getElementById("opt_ctc") != "undefined") {
+
+                    opcao = document.getElementById("opt_ctc").value;
+
+                }
+
+            }
+
+            else {
+
+                if (document.getElementById("i_moe_idc")) {
+
+                    if (document.getElementById("i_moe_idc") != "undefined") {
+
+                        opcao = document.getElementById("i_moe_idc").value;
+
+                    }
+
+                }
+
+            }
+
+ 
+
+            var tecla;
+
+ 
+
+            if (teclapres == null || teclapres == "undefined")
+
+                tecla = -1;
+
+            else
+
+                tecla = teclapres.keyCode;
+
+ 
+
+            if (caracter == null || caracter == "undefined")
+
+                caracter = ".";
+
+ 
+
+            if (caracter != "") {
+
+                vr = troca(vr, caracter, "");
+
+            }
+
+ 
+
+            vr = troca(vr, "/", "");
+
+            vr = troca(vr, ",", "");
+
+            vr = troca(vr, ".", "");
+
+ 
+
+            tam = vr.length;
+
+ 
+
+            if (isNaN(vr)) {
+
+                campo.value = vr.substr(0, tam - 1);
+
+                vr = campo.value;
+
+            }
+
+ 
+
+            if (tecla > 0) {
+
+                if (tam < tammax && tecla != 8) {
+
+                    tam = vr.length + 1;
+
+                }
+
+                if (tecla == 8) {
+
+                    tam = tam - 1;
+
+                }
+
+            }
+
+ 
+
+            if (tecla == -1 || tecla == 8 || tecla >= 48 && tecla <= 57 || tecla >= 96 && tecla <= 105) {
+
+ 
+
+                //NOVO
+
+                //evitar com que ao teclar um numero aumente a casa decimal.
+
+                if (r == "false" && tam > 0) {
+
+                    tam = tam - 1;
+
+                }
+
+ 
+
+                if (opcao == "I") {
+
+                    if (tam > 0 && tam <= 5)//indice
+
+                    {
+
+                        campo.value = vr.substr(0, tam - 5) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if ((tam >= 6) && (tam <= 8)) {
+
+                        campo.value = vr.substr(0, tam - 5) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if ((tam >= 9) && (tam <= 11)) {
+
+                        campo.value = vr.substr(0, tam - 8) + caracter + vr.substr(tam - 8, 3) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if ((tam >= 12) && (tam <= 14)) {
+
+                        campo.value = vr.substr(0, tam - 11) + caracter + vr.substr(tam - 11, 3) + caracter + vr.substr(tam - 8, 3) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if ((tam >= 15) && (tam <= 17)) {
+
+                        campo.value = vr.substr(0, tam - 14) + caracter + vr.substr(tam - 14, 3) + caracter + vr.substr(tam - 11, 3) + caracter + vr.substr(tam - 8, 3) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if ((tam >= 18) && (tam <= 20)) {
+
+                        campo.value = vr.substr(0, tam - 17) + caracter + vr.substr(tam - 17, 3) + caracter + vr.substr(tam - 14, 3) + caracter + vr.substr(tam - 11, 3) + caracter + vr.substr(tam - 8, 3) + ',' + vr.substr(tam - 5, tam);
+
+                    }
+
+                    if (tam > 20) {
+
+                        alert("Excedeu o limite");
+
+                        campo.value = campo.value.substr(0, 25);
+
+                    }
+
+                } else {
+
+ 
+
+                    if (tam <= 2) {
+
+                        campo.value = vr;
+
+                    }
+
+                    if ((tam > 2) && (tam <= 5)) {
+
+                        campo.value = vr.substr(0, tam - 2) + ',' + vr.substr(tam - 2, tam);
+
+                    }
+
+                    if ((tam >= 6) && (tam <= 8)) {
+
+                        campo.value = vr.substr(0, tam - 5) + caracter + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+
+                    }
+
+                    if ((tam >= 9) && (tam <= 11)) {
+
+                        campo.value = vr.substr(0, tam - 8) + caracter + vr.substr(tam - 8, 3) + caracter + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+
+                    }
+
+                    if ((tam >= 12) && (tam <= 14)) {
+
+                        campo.value = vr.substr(0, tam - 11) + caracter + vr.substr(tam - 11, 3) + caracter + vr.substr(tam - 8, 3) + caracter + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+
+                    }
+
+                    if ((tam >= 15) && (tam <= 17)) {
+
+                        campo.value = vr.substr(0, tam - 14) + caracter + vr.substr(tam - 14, 3) + caracter + vr.substr(tam - 11, 3) + caracter + vr.substr(tam - 8, 3) + caracter + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+
+                    }
+
+                    if (tam > 17) {
+
+                        alert("Excedeu o limite!!!");
+
+                        campo.value = campo.value.substr(0, 22);
+
+                    }
+
+                }
+
+            }
+
+ 
+
+        } catch (e) {
+
+            console.log(e.toString()) 
+
+        }
+
+    }
+
+ 
+
+    function soNumeros(e) {
+
+ 
+
+        if (navigator.appName != "Microsoft Internet Explorer") {
+
+ 
+
+            if (e.which < 48 || e.which > 57) {
+
+                return false;
+
+            }
+
+        } else {
+
+            if (e.keyCode < 48 || e.keyCode > 57) {
+
+                return false;
+
+            }
+
+        }
+
+ 
+
+    }
+
+ 
+
+    function troca(str, strsai, strentra) {
+
+ 
+
+        while (str.indexOf(strsai) > -1) {
+
+            str = str.replace(strsai, strentra);
+
+        }
+
+        return str;
+
+    }
+
+ 
+
+</script>?
